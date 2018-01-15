@@ -27,7 +27,7 @@ import numpy as np
 # Import data
 CSV_IN   = pd.read_csv('featureSheet.csv',index_col=0)
 # Input data
-X_mat_original = CSV_IN.loc[:,('num_of_sections','num_of_rows','num_of_seats','lastSRSCount','num_of_fbPosts','num_of_twPosts','num_of_snapshots')]
+X_mat_original = CSV_IN.loc[:,('num_of_fbPosts','num_of_twPosts','num_of_snapshots')]
 # Input Labels
 Y_mat_original = CSV_IN.loc[:,('labels')]
 # Convert to numpy matrix
@@ -45,9 +45,7 @@ X_mat, Y_mat = ada.fit_sample(X_mat_original, Y_mat_original)
 #X_mat, Y_mat = balanceMATs(X_mat_original, Y_mat_original)
 
 # Randomizing labels for sanity check
-Y_mat_rnd = shuffle(Y_mat)
-Y_mat_rnd = shuffle(Y_mat_rnd)
-Y_mat_rnd = shuffle(Y_mat_rnd)
+Y_mat_rnd = shuffle(shuffle(shuffle(Y_mat)))
 
 ##############################################################################
 # Model
