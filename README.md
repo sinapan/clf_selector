@@ -1,6 +1,6 @@
 # clf_selector (Classifier Selector)
 
-This project helps to compare the results of multiple clasifiers from SKLEARN library on relativly small datasets (around 500 datapoints).
+This project helps to compare the results of multiple clasifiers from SKLEARN (scikit-learn) library on relativly small datasets (around 500 datapoints).
 
 ## Getting Started
 
